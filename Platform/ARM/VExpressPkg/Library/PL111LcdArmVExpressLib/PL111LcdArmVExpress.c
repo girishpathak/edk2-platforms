@@ -232,7 +232,7 @@ LcdPlatformGetVram (
     // Allocate the VRAM from the DRAM so that nobody else uses it.
     Status = gBS->AllocatePages (
                     AllocateAddress,
-                    EfiBootServicesData,
+                    EfiRuntimeServicesData,
                     EFI_SIZE_TO_PAGES (((UINTN)LCD_VRAM_SIZE)),
                     VramBaseAddress
                     );
